@@ -1,0 +1,75 @@
+#inputForm {
+	width: 350px;
+	padding: 10px;
+	margin-bottom: 30px;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 10px;
+	flex-shrink: 0;
+}
+
+#inputForm h2 {
+	font-size: 1.5rem;
+	text-align: center;
+	margin-top: 10px;
+}
+
+#basicInput h2 {
+	margin-bottom: 10px;
+}
+
+
+#profileLabel {
+	margin-bottom: 10px;
+}
+
+#inputForm .longInput {
+	margin-bottom: 10px;
+}
+
+#skillInput {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+.skills {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.deleteIcon {
+	width: 35px;
+	height: 35px;
+	padding: 3px;
+	margin-left: 10px;
+	border-radius: 50%;
+	transition: 200ms;
+}
+.deleteIcon:hover {
+	cursor: pointer;
+}
+
+#educationInput,
+#experienceInput {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+.schoolInput {
+	width: 100%;
+	margin-top: 10px;
+}
+
+#inputForm .shortInput {
+	width: 150px;
+}
+
+@media all and (max-width: 800px) {
+	#inputForm {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
