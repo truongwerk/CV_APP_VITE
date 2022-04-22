@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import TextField from "@mui/material/TextField";
 import { styled } from "@mui/material/styles";
@@ -132,7 +132,7 @@ const SkillInput = (props) => {
 	};
 	useEffect(() => {
 		if (inputSkill.length === 0) {
-			props.inputCallback(["HTML", "CSS", "JavaScript", "React"], "skill");
+			props.inputCallback(["HTML", "CSS", "Javascript", "React"], "skill");
 		} else {
 			props.inputCallback(inputSkill, "skill");
 		}

@@ -1,4 +1,4 @@
-import React, { useState,useRef } from "react";
+import React, { useState, useRef } from "react";
 import Input from "./components/Input";
 import CvDemo from "./components/Cv";
 import ReactToPrint from "react-to-print";
@@ -30,23 +30,28 @@ const App = () => {
 	const handleInputCallback = (childData, selector) => {
 		setState({ ...state, [selector]: childData });
 	};
-  const printRef = useRef()
+	const printRef = useRef();
 	return (
 		<div id="App">
 			<Header />
 			<div id="content">
 				<div id="inputForm">
 					<Input parentCallback={handleInputCallback} />
-          <ReactToPrint
-							trigger={() => {
-								return (
-									<Button id="printBtn" fullWidth variant="outlined" endIcon={<SaveAsOutlinedIcon />}>
-										Save CV as PDF
-									</Button>
-								);
-							}}
-							content={() => printRef.current}
-						/>
+					<ReactToPrint
+						trigger={() => {
+							return (
+								<Button
+									id="printBtn"
+									fullWidth
+									variant="outlined"
+									endIcon={<SaveAsOutlinedIcon />}
+								>
+									Save CV as PDF
+								</Button>
+							);
+						}}
+						content={() => printRef.current}
+					/>
 				</div>
 				<div id="cvWrapper" ref={printRef}>
 					<CvDemo cvData={state} />
